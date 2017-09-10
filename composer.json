@@ -1,0 +1,42 @@
+{
+    "name": "emir/logpusher",
+    "type": "library",
+    "description": "LogPusher integration for PHP",
+    "keywords": ["log", "logging"],
+    "homepage": "http://logpusher.com",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Emir Karsiyakali",
+        "email": "emirkarsiyakali@gmail.com"
+      }
+    ],
+    "require": {
+        "php": "^7.1",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "LogPusher\\": "src/"
+        }
+    },
+    "scripts": {
+        "tests": [
+            "vendor/bin/phpunit --verbose"
+        ],
+        "tests-travis": [
+            "vendor/bin/phpunit --verbose --configuration phpunit.xml --coverage-clover test/clover.xml"
+        ],
+        "tests-report": [
+            "vendor/bin/phpunit --verbose --configuration phpunit.xml --coverage-html test/html-report"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-alpha"
+        }
+    }
+}

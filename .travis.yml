@@ -1,0 +1,23 @@
+language: php
+dist: trusty
+sudo: false
+
+matrix:
+  include:
+    - php: 7.1
+      env: GUZZLE_VERSION=^5.3
+    - php: 7.1
+      env: GUZZLE_VERSION=^6.0
+    - php: 7.2
+      env: GUZZLE_VERSION=^5.3
+    - php: 7.2
+      env: GUZZLE_VERSION=^6.0
+
+before_install:
+  - composer require "guzzlehttp/guzzle:${GUZZLE_VERSION}" --no-update
+
+install:
+  - if [[ $TRAVIS_PHP_VERSION != 5.5.9 ]]; then travis_retry composer update --no-interaction --prefer-source ; fi
+
+script:
+  - make test

@@ -1,0 +1,1 @@
+The LogPusher PHP library is free software released under the MIT License. See [LICENSE](http://emir.mit-license.org/) for details.
