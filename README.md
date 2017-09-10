@@ -17,7 +17,7 @@ LogPusher is easy to use on the client side thanks to its simple interface. Just
 ## Installation
 
 ```
-composer require emir/logpusher
+composer require emir/logpusher:0.0.1-alpha
 ```
 
 ## Support
