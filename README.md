@@ -20,6 +20,10 @@ LogPusher is easy to use on the client side thanks to its simple interface. Just
 composer require emir/logpusher:0.0.1-alpha
 ```
 
+## Usage
+
+[Example](https://gist.github.com/emir/d2a4aa0f5d67fecf00f6b0b23daef962)
+
 ## Support
 
 * [Search open and closed issues](https://github.com/emir/logpusher/issues?utf8=✓&q=is%3Aissue) for similar problems
