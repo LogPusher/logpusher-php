@@ -25,9 +25,9 @@ final class Email
 
     /**
      * @param string $email
-     * @throws \InvalidArgumentException
+     * @return bool
      */
-    private function ensureIsValidEmail(string $email): void
+    private function ensureIsValidEmail(string $email): bool
     {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             throw new InvalidEmailException(sprintf(
