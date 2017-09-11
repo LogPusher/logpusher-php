@@ -1,6 +1,7 @@
 # LogPusher: Log tracking for PHP
 
-[![Build Status](https://travis-ci.org/logpusher/logpusher-php.svg?branch=master)](https://travis-ci.org/logpusher/logpusher-php)
+[![Build Status](https://travis-ci.org/LogPusher/logpusher-php.svg?branch=master)](https://travis-ci.org/LogPusher/logpusher-php.svg?branch=master)
+
 
 LogPusher is a system that allows you to receive notifications through your mobile on a single application. Apart from push notifications, you can also receive information without a mobile client via SMS and Mail service. You can integrate with any software through the API. Thanks to rapid API integration, you do not spend extra time for information and mail service. 
 
