@@ -1,5 +1,5 @@
 {
-    "name": "emir/logpusher",
+    "name": "logpusher/logpusher-php",
     "type": "library",
     "description": "LogPusher integration for PHP",
     "keywords": ["log", "logging"],
@@ -33,10 +33,5 @@
         "tests-report": [
             "vendor/bin/phpunit --verbose --configuration phpunit.xml --coverage-html test/html-report"
         ]
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "v0.0.1-alpha"
-        }
     }
 }
