@@ -35,6 +35,8 @@ final class Email
                 $email
             ));
         }
+
+        return true;
     }
 
     /**

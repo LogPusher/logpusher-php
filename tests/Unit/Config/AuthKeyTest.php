@@ -12,7 +12,7 @@ final class AuthKeyTest extends TestCase
     /**
      * @test
      */
-    public function can_create_a_valid_auth_key_string()
+    public function canCreateAValidAuthKeyString()
     {
         $email = new \LogPusher\Config\Email('hello@logpusher.com');
 

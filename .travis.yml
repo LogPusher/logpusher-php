@@ -2,25 +2,19 @@ language: php
 dist: trusty
 sudo: false
 
-matrix:
-  include:
-    - php: 7.0
-      env: GUZZLE_VERSION=^5.3
-    - php: 7.0
-      env: GUZZLE_VERSION=^6.0
-    - php: 7.1
-      env: GUZZLE_VERSION=^5.3
-    - php: 7.1
-      env: GUZZLE_VERSION=^6.0
-    - php: 7.2
-      env: GUZZLE_VERSION=^5.3
-    - php: 7.2
-      env: GUZZLE_VERSION=^6.0
+php:
+  - 7.1
+  - 7.2
 
 before_install:
-  - composer require "guzzlehttp/guzzle:${GUZZLE_VERSION}" --no-update
+  - mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{,.disabled} || echo "xdebug not available"
+  - composer self-update
 
 install: travis_retry composer update --no-interaction --prefer-dist
 
 script:
   - make test
+
+cache:
+  directories:
+    - $HOME/.composer/cache

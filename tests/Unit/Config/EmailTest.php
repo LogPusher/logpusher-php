@@ -12,7 +12,7 @@ final class EmailTest extends TestCase
     /**
      * @test
      */
-    public function canBeCreatedFromValidEmailAddress(): void
+    public function canBeCreatedFromValidEmailAddress()
     {
         $this->assertInstanceOf(
             \LogPusher\Config\Email::class,
@@ -23,7 +23,7 @@ final class EmailTest extends TestCase
     /**
      * @test
      */
-    public function cannotBeCreatedFromInvalidEmailAddress(): void
+    public function cannotBeCreatedFromInvalidEmailAddress()
     {
         $this->expectException(\LogPusher\Config\Exceptions\InvalidEmailException::class);
 
@@ -33,7 +33,7 @@ final class EmailTest extends TestCase
     /**
      * @test
      */
-    public function canBeUsedAsString(): void
+    public function canBeUsedAsString()
     {
         $this->assertEquals(
             'hello@logpusher.com',

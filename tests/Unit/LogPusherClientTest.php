@@ -12,7 +12,7 @@ class LogPusherClientTest extends TestCase
     /**
      * @test
      */
-    public function can_be_created_from_valid_email_password_and_api_key()
+    public function canBeCreatedFromValidEmailPasswordAndApiKey()
     {
         $logPusher = new \LogPusher\LogPusherClient(
             new \GuzzleHttp\Client(),
