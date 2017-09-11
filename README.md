@@ -14,6 +14,7 @@ LogPusher is easy to use on the client side thanks to its simple interface. Just
 ## Getting started
 
 1. [Create a LogPusher account](http://logpusher.com/)
+2. Create a new App and get API Token
 
 ## Installation
 
@@ -23,7 +24,26 @@ composer require logpusher/logpusher-php
 
 ## Usage
 
-[Example](https://gist.github.com/emir/d2a4aa0f5d67fecf00f6b0b23daef962)
+```php
+$pusher = new \LogPusher\LogPusherClient(
+    new \GuzzleHttp\Client([]),
+    'hello@logpusher.com',
+    'PASSWORD',
+    'API_KEY'
+);
+```
+
+```php
+$pusher->push(
+    'My awesome log message', 
+    'myawesomesite.com', 
+    'E-commerce', 
+    'Notice', 
+    date('H:i'), 
+    new \DateTime('now'), 
+    '1'
+);
+```
 
 ## Support
 
